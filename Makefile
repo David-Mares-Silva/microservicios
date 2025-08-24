@@ -18,7 +18,7 @@ install-azure:
 		pip install git+
 
 lint:
-	pylint --disable=R,C *.py
+	pylint --disable=R,C $$(find . -type f -name "*.py")
 
 format:
 	black *.py
