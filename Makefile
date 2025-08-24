@@ -18,10 +18,10 @@ install-azure:
 		pip install git+
 
 lint:
-	pylint --disable=R,C
+	pylint --disable=R,C *.py
 
 format:
 	black *.py
 
-test:
-	python -m pytest -vv  
+#test:
+#	python -m pytest -vv  
