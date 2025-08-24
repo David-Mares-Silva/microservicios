@@ -23,5 +23,5 @@ lint:
 # pylint --disable=R,C 020_api/flask_intro.py  || true
 
 format:
-	black *.py
+	black $$(find . -type f -name "*.py")
 
