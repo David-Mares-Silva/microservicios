@@ -18,11 +18,10 @@ install-azure:
 		pip install git+
 
 lint:
-	pylint --disable=R,C 020_api/flask_intro.py  || true
-#$$(find . -type f -name "*.py") || true
+	pylint --disable=R,C --exit-zero $$(find . -type f -name "*.py")
+#$$(find . -type f -name "*.py") || true --exit-zero
+# pylint --disable=R,C 020_api/flask_intro.py  || true
 
 format:
 	black *.py
 
-#test:
-#	python -m pytest -vv  
